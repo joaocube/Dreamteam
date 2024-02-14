@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Monte seu dreamteam e compartilhe com a Loudinhos!">
+  <link rel="stylesheet" href="/css/global/style.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <title>DreamTeam.gg - CBLOL</title>
+</head>
+
+<body>
+
+  <div id="cursor"></div>
+  <div id="Modal" class="modal">
+    <span class="close cor-3 font3-Bnm2" onclick="fecharModal()">&times;</span>
+    <div class="modal-content">
+      <div class="modal-text">
+        <h1 class="cor-4 font2-Mnm">Por que o DreamTeam?</h1>
+        <p class="cor-2 font1-Pnm4">
+          A ideia surgiu no meio do 1º split e foi win/win. A comunidade teria algo pra interagir e nós teriamos um projeto pra estudar. O "game" DREAMTEAM é feito por 2 dev's e as artes pela @Loudinhos.
+        </p>
+
+      </div>
+      <div class="modal-text">
+        <h1 class="cor-4 font2-Mnm">Como ajudar?</h1>
+        <p class="cor-2 font1-Pnm4">Precisamos de ajuda na parte técnica / financeira para colocar o site "no ar". Atualmente usamos o github como hospedagem mas ele limita funções. Por fim, caso queira ajudar mande dm (<a href="https://twitter.com/joaocube">@Joaocube</a>) ou pix: dreamteamgg@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <header class="header-bg">
+    <article class="header-container">
+      <div class="header-conteudo">
+        <div class="logo">
+          <a href="index.html">
+            <img src="./assets/img/logo-main.jpg" alt="imagem logo" width="46px">
+          </a>
+        </div>
+        <div class="redes-sociais">
+          <ul>
+            <li>
+              <a href="https://github.com/JoaoCube" class="linkBlank">
+                <img src="./assets/img/icon/icon-github.svg" alt="imagem github">
+              </a>
+            </li>
+            <li>
+              <img src="./assets/img/icon/icon-info.svg" alt="imagem informacoes" id="btnModal">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </header>
+
+  <main>
+    <section class="banner-bg">
+      <article class="banner-container">
+        <img src="./assets/img/logo-lol.png" alt="imagem lol logo" width="400px">
+        <div class="banner-conteudo">
+          <img src="/assets/img/banner-main.jpg" alt="imagem">
+        </div>
+      </article>
+    </section>
+
+    <section class="info-bg">
+      <div class="estrelas">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+      </div>
+      <article class="info-container">
+        <div class="info-conteudo">
+          <div class="infos ">
+            <div class="info-card ">
+              <picture>
+                <img src="./assets/img/info1.png" alt="imagem">
+              </picture>
+              <div class="info-text">
+                <h1 class="cor-5 font2-Mnm upc decoracao">1º ETAPA</h1>
+                <br>
+                <p class="cor-2 font1-Pnm4">Escolha 5 jogadores, se quiser mudar um jogador basta excluí-lo (-) e adicionar outro (+).</p>
+              </div>
+            </div>
+            <div class="info-card ">
+              <picture>
+                <img src="./assets/img/info2.png" alt="imagem">
+              </picture>
+              <div class="info-text">
+                <h1 class="cor-5 font2-Mnm upc decoracao">2º ETAPA</h1>
+                <br>
+                <p class="cor-2 font1-Pnm4"> Não existe quantidade de 'créditos' para montar seu dreamteam, não limitaremos você.</p>
+              </div>
+            </div>
+            <div class="info-card ">
+              <picture>
+                <img src="./assets/img/info3.png" alt="imagem">
+              </picture>
+              <div class="info-text">
+                <h1 class="cor-5 font2-Mnm upc decoracao">3º ETAPA</h1>
+                <br>
+                <p class="cor-2 font1-Pnm4">Compartilhe e marque a @Loudinhos no twitter/x e faça parte da nossa comunidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="game-bg">
+      <article class="slider-container">
+        <div class="slider-conteudo" data-slider>
+          <div class="slider-areatitle">
+            <div>
+              <h1 class="cor-8 font3-Bnm2">Monte seu</h1>
+              <h2 class="cor-4 font3-Bnm3i">DreamTeam</h2>
+            </div>
+            <div class="slider-buttons">
+              <button class="slider-button" data-slider-prev disabled>
+                <img src="./assets/img/icon/icon-prev.svg" alt="imagem seta">
+              </button>
+              <button class="slider-button" data-slider-next>
+                <img src="./assets/img/icon/icon-next.svg" alt="imagem seta">
+              </button>
+            </div>
+          </div> <!-- FIM AREA TITLE E BUTTON -->
+          <ul class="slider__track" data-slider-track>
+            <li>
+              <img src="./assets/img/icon/top-icon.svg" alt="imagem top laner" width="36px" height="36px">
+              <div class="slide">
+                <button class="primaria">
+                  <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
+                </button>
+                <img src="/assets/img/players/top-supercleber.webp" class="slideimg" />
+                <div class="slide-name">
+                  <p class="cor-2 font1-Pnm4">Top</p>
+                </div>
+              </div>
+            </li>
+            <!-- ITEM 1 -->
+            <li>
+              <img src="./assets/img/icon/jungle-icon.svg" alt="imagem top laner" width="36px" height="36px">
+              <div class="slide">
+                <button class="primaria">
+                  <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
+                </button>
+                <img src="/assets/img/players/jungle-cariok.webp" class="slideimg" />
+                <div class="slide-name">
+                  <p class="cor-2 font1-Pnm4">Jungler</p>
+                </div>
+              </div>
+            </li>
+            <!-- ITEM 2 -->
+            <li>
+              <img src="./assets/img/icon/mid-icon.svg" alt="imagem top laner" width="36px" height="36px">
+              <div class="slide">
+                <button class="primaria">
+                  <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
+                </button>
+                <img src="/assets/img/players/mid-grevthar.webp" class="slideimg" />
+                <div class="slide-name">
+                  <p class="cor-2 font1-Pnm4">Mid</p>
+                </div>
+            </li>
+            <!-- ITEM 3 -->
+            <li>
+              <img src="./assets/img/icon/adc-icon.svg" alt="imagem top laner" width="36px" height="36px">
+              <div class="slide">
+                <button class="primaria">
+                  <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
+                </button>
+                <img src="/assets/img/players/adc-route.webp" class="slideimg" />
+                <div class="slide-name">
+                  <p class="cor-2 font1-Pnm4">Adc</p>
+                </div>
+              </div>
+            </li>
+            <!-- ITEM 4 -->
+            <li>
+              <img src="./assets/img/icon/support-icon.svg" alt="imagem top laner" width="36px" height="36px">
+              <div class="slide">
+                <button class="primaria">
+                  <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
+                </button>
+                <img src="/assets/img/players/sup-ceos.webp" class="slideimg" />
+                <div class="slide-name">
+                  <p class="cor-2 font1-Pnm4">Support</p>
+                </div>
+              </div>
+            </li>
+            <!-- ITEM 5 -->
+            <li>
+              <img src="./assets/img/icon/mid-icon.svg" alt="imagem top laner" width="36px" height="36px">
+              <div class="slide">
+                <button class="primaria">
+                  <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
+                </button>
+                <img src="/assets/img/players/coach-dionrray.webp" class="slideimg" />
+                <div class="slide-name">
+                  <p class="cor-2 font1-Pnm4">Coach</p>
+                </div>
+              </div>
+            </li>
+            <!-- COACH -->
+          </ul>
+        </div>
+        <div class="share">
+          <button class="cor-2 font1-Pnm2 upc">SALVAR TIME
+            <img src="./assets/img/icon/icon-save.svg" alt="imagem save">
+          </button>
+          <button class="cor-2 font1-Pnm2 upc" onclick="share('@loudinhos')">COMPARTILHAR<img src="./assets/img/icon/icon-x.svg" alt="imagem compartilhar"></button>
+        </div>
+      </article>
+    </section>
+
+    <section class="apoio-bg">
+      <div class="estrelas">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+      </div>
+      <article class="apoio-container">
+        <div class="apoio-conteudo" id="apoiadores">
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer-bg">
+    <article class="footer-container">
+      <div class="footer-conteudo">
+      </div>
+    </article>
+
+  </footer>
+
+  <script src="/js/main.js"></script>
+
+</body>
+
+</html>
