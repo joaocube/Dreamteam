@@ -66,6 +66,11 @@ if (track) {
   });
 }
 
+// ADICIONANDO BACKGROUND NA SECTION GAME
+const imgGame = "/assets/img/game-main.png";
+const gamebg = document.querySelector(".game-bg");
+gamebg.style.backgroundImage = "url(" + imgGame + ")";
+
 // CRIANDO FOOTER
 document.addEventListener("DOMContentLoaded", function () {
   let direitoAutoral = document.createElement("p");
@@ -111,12 +116,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const arrobaP = criarElemento(
     "p",
     ["cor-2", "font1-Pnm4"],
-    "Dev Junior - Frontend : ❝ O DreamTeam surgiu para a comunidade interagir mais durante o CBLOL ❞"
+    "Dev Junior - Frontend : ❝ O DreamTeam surgiu para a comunidade interagir mais durante os splits do CBLOL ❞"
   );
   const arrobaP2 = criarElemento(
     "p",
     ["cor-2", "font1-Pnm4"],
-    "Fandom da Loud e principal apoiador do DreamTeam. Todas as artes foram feitas pelos seus designers."
+    "Fandom da Loud e principal apoiador do DreamTeam. Todas as artes foram feitas pelos seus designers"
   );
 
   const apoioConteudo = document.querySelector(".apoio-conteudo");
