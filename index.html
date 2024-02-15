@@ -4,15 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Monte seu dreamteam e compartilhe com a Loudinhos!">
-  <link rel="stylesheet" href="/css/global/style.css">
+  <meta name="description" content="Monte seu dreamteam do League of Legends Brasileiro!">
+  <link rel="stylesheet" href="./css/global/style.css">
   <link rel="icon" href="favicon.png" type="image/x-icon">
   <title>DreamTeam.gg - CBLOL</title>
 </head>
 
 <body>
-
-  <div id="cursor"></div>
   <div id="Modal" class="modal">
     <span class="close cor-3 font3-Bnm2" onclick="fecharModal()">&times;</span>
     <div class="modal-content">
@@ -29,8 +27,9 @@
       </div>
     </div>
   </div>
+
   <header class="header-bg">
-    <article class="header-container">
+    <article class="header-container all-container">
       <div class="header-conteudo">
         <div class="logo">
           <a href="index.html">
@@ -58,7 +57,9 @@
       <article class="banner-container">
         <img src="./assets/img/logo-lol.png" alt="imagem lol logo" width="400px">
         <div class="banner-conteudo">
-          <img src="/assets/img/banner-main.jpg" alt="imagem">
+          <video muted preload="auto" autoplay="autoplay" loop width="100%">
+            <source src="./assets/img/video-main.mp4" type="video/mp4">
+          </video>
         </div>
       </article>
     </section>
@@ -68,9 +69,9 @@
         <div class="stars"></div>
         <div class="stars2"></div>
       </div>
-      <article class="info-container">
+      <article class="info-container all-container">
         <div class="info-conteudo">
-          <div class="infos ">
+          <div class="infos">
             <div class="info-card ">
               <picture>
                 <img src="./assets/img/info1.png" alt="imagem">
@@ -107,7 +108,7 @@
     </section>
 
     <section class="game-bg">
-      <article class="slider-container">
+      <article class="slider-container all-container">
         <div class="slider-conteudo" data-slider>
           <div class="slider-areatitle">
             <div>
@@ -130,7 +131,7 @@
                 <button class="primaria">
                   <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
                 </button>
-                <img src="/assets/img/players/top-supercleber.webp" class="slideimg" />
+                <img src="./assets/img/players/top-supercleber.webp" class="slideimg" />
                 <div class="slide-name">
                   <p class="cor-2 font1-Pnm4">Top</p>
                 </div>
@@ -143,7 +144,7 @@
                 <button class="primaria">
                   <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
                 </button>
-                <img src="/assets/img/players/jungle-cariok.webp" class="slideimg" />
+                <img src="./assets/img/players/jungle-cariok.webp" class="slideimg" />
                 <div class="slide-name">
                   <p class="cor-2 font1-Pnm4">Jungler</p>
                 </div>
@@ -156,7 +157,7 @@
                 <button class="primaria">
                   <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
                 </button>
-                <img src="/assets/img/players/mid-grevthar.webp" class="slideimg" />
+                <img src="./assets/img/players/mid-grevthar.webp" class="slideimg" />
                 <div class="slide-name">
                   <p class="cor-2 font1-Pnm4">Mid</p>
                 </div>
@@ -168,7 +169,7 @@
                 <button class="primaria">
                   <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
                 </button>
-                <img src="/assets/img/players/adc-route.webp" class="slideimg" />
+                <img src="./assets/img/players/adc-route.webp" class="slideimg" />
                 <div class="slide-name">
                   <p class="cor-2 font1-Pnm4">Adc</p>
                 </div>
@@ -181,7 +182,7 @@
                 <button class="primaria">
                   <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
                 </button>
-                <img src="/assets/img/players/sup-ceos.webp" class="slideimg" />
+                <img src="./assets/img/players/sup-ceos.webp" class="slideimg" />
                 <div class="slide-name">
                   <p class="cor-2 font1-Pnm4">Support</p>
                 </div>
@@ -194,7 +195,7 @@
                 <button class="primaria">
                   <img src="./assets/img/icon/icon-mais.svg" alt="imagem adicionar" width="46px" height="46px">
                 </button>
-                <img src="/assets/img/players/coach-dionrray.webp" class="slideimg" />
+                <img src="./assets/img/players/coach-dionrray.webp" class="slideimg" />
                 <div class="slide-name">
                   <p class="cor-2 font1-Pnm4">Coach</p>
                 </div>
@@ -213,27 +214,21 @@
     </section>
 
     <section class="apoio-bg">
-      <div class="estrelas">
-        <div class="stars"></div>
-        <div class="stars2"></div>
-      </div>
-      <article class="apoio-container">
-        <div class="apoio-conteudo" id="apoiadores">
-        </div>
+      <article class="apoio-container all-container">
+        <div class="apoio-conteudo"></div>
       </article>
     </section>
   </main>
 
   <footer class="footer-bg">
-    <article class="footer-container">
+    <article class="footer-container all-container">
       <div class="footer-conteudo">
       </div>
     </article>
 
   </footer>
 
-  <script src="/js/main.js"></script>
-
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

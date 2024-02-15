@@ -5,11 +5,6 @@
   background-color: var(--cor-0);
   padding: 60px 0;
 }
-.info-container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
 /* CONT DOS CARDS INFO */
 .infos {
   display: flex;
@@ -60,19 +55,12 @@ picture img {
   .infos {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px;
   }
   .info-card {
-    box-sizing: border-box;
     width: 100%;
     height: auto;
   }
-  .info-card picture {
-    width: 100%;
-    max-height: 180px;
-    overflow: hidden;
-  }
-
   .info-text h1 {
     font: 600 1.2rem/1 "Neue Montreal-R", sans-serif;
   }

@@ -32,12 +32,6 @@ section.game-bg {
   background: url("/assets/img/game-main.png");
   height: auto;
 }
-/* SLIDER CONTAINER */
-.slider-container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
 /* TEXTO E BOTOES */
 .slider-areatitle {
   display: flex;
@@ -92,16 +86,6 @@ section.game-bg {
   position: relative;
   background-color: var(--cor-3);
   border: 2px solid var(--cor-2);
-}
-.slide::before {
-  content: "";
-  position: absolute;
-  height: 10px;
-  width: 6px;
-  top: -12px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background-color: var(--cor-2);
 }
 .slide:hover .slide-name {
   visibility: visible;

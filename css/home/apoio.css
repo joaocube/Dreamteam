@@ -6,28 +6,15 @@
   box-sizing: border-box;
   background-color: var(--cor-0);
 }
-.apoio-container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
 .apoio-conteudo {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 20px;
   overflow: hidden;
 }
-.circulo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 2px solid var(--cor-6);
-  overflow: hidden;
-}
 .apoio-conteudo .apoio-card {
-  width: 100%;
+  max-width: 400px;
   height: auto;
-  text-align: left;
   padding: 20px;
   overflow: hidden;
   background-color: var(--cor-1);
@@ -42,10 +29,10 @@
     0 0
   );
 }
-.apoio-card h1 {
+.apoio-card a {
   position: relative;
 }
-.apoio-card h1::before {
+.apoio-card a::before {
   content: "";
   position: absolute;
   background-color: var(--cor-4);
@@ -68,10 +55,7 @@
     grid-template-columns: 1fr;
     margin: 0 20px;
   }
-  .apoio-container .circulo {
-    display: none;
-  }
-  .apoio-card h1 {
+  .apoio-card a {
     font: 600 1.4rem/1.3 "Neue Montreal-P", sans-serif;
   }
   .apoio-card p {

@@ -4,18 +4,17 @@ linksBlank.forEach(function (linkBlank) {
   linkBlank.setAttribute("target", "_blank");
 });
 
-// SEGUIR O CURSOR
-document.addEventListener("DOMContentLoaded", function () {
-  const cursor = document.getElementById("cursor");
-
-  document.addEventListener("mousemove", function (e) {
-    // Atualiza a posição do círculo para seguir o cursor
-    const x = e.clientX;
-    const y = e.clientY;
-    cursor.style.left = x + "px";
-    cursor.style.top = y + "px";
-  });
-});
+// MODAL INFO
+let modal = document.getElementById("Modal");
+let btnModal = document.getElementById("btnModal");
+// Ação ao clicar na imagem
+btnModal.onclick = function () {
+  modal.style.display = "block";
+};
+// Função para fechar o modal
+function fecharModal() {
+  modal.style.display = "none";
+}
 
 // COMPARTILHAR NO X
 function share(usuario) {
@@ -67,54 +66,66 @@ if (track) {
   });
 }
 
-// ADICIONAR CARDS DO APOIO-CONT
-function apoioCard() {
-  fetch("js/apoio.json")
-    .then((response) => response.json())
-    .then((apoiadores) => {
-      const contApoio = document.querySelector("#apoiadores");
-
-      apoiadores.map((apoiador) => {
-        const cardApoio = document.createElement("div");
-        cardApoio.classList.add("apoio-card");
-
-        // CRIANDO TITULO E DESCRICAO
-        const arrobaNome = document.createElement("h1");
-        arrobaNome.classList.add("font3-Bnm", "cor-6");
-        arrobaNome.textContent = apoiador.arroba;
-
-        const descricao = document.createElement("p");
-        descricao.classList.add("font1-Pnm4", "cor-2");
-        descricao.textContent = apoiador.descricao;
-
-        cardApoio.appendChild(arrobaNome);
-        cardApoio.appendChild(descricao);
-        contApoio.appendChild(cardApoio);
-      });
-    });
-}
-apoioCard();
-
 // CRIANDO FOOTER
 document.addEventListener("DOMContentLoaded", function () {
-  let paragrafo = document.createElement("p");
-  paragrafo.classList.add("font1-Pnm2", "cor-2");
-  paragrafo.textContent = "JoaoCube © Todos os direitos reservados";
+  let direitoAutoral = document.createElement("p");
+  direitoAutoral.classList.add("font1-Pnm2", "cor-2");
+  direitoAutoral.textContent = "JoaoCube © Todos os direitos reservados";
   // SELECAO ONDE VAI SER ADICIONADO
   let footer = document.querySelector(".footer-conteudo");
-  // ADICIONANDO PARAGRAFO
-  footer.appendChild(paragrafo);
+  // ADICIONANDO ATRIBUTO AO FOOTER
+  footer.appendChild(direitoAutoral);
 });
 
-// MODAL INFO
-// Referências aos elementos do DOM
-let modal = document.getElementById("Modal");
-let btnModal = document.getElementById("btnModal");
-// Ação ao clicar na imagem
-btnModal.onclick = function () {
-  modal.style.display = "block";
-};
-// Função para fechar o modal
-function fecharModal() {
-  modal.style.display = "none";
-}
+// CRIANDO CARDS DO ARROBA
+document.addEventListener("DOMContentLoaded", function () {
+  // Função para criar elementos e configurar atributos
+  function criarElemento(tag, classes, texto, link) {
+    const elemento = document.createElement(tag);
+    if (classes) elemento.classList.add(...classes);
+    if (texto) elemento.textContent = texto;
+    if (link) {
+      elemento.setAttribute("href", link);
+      elemento.setAttribute("target", "_blank");
+    }
+    return elemento;
+  }
+
+  // Criação dos elementos
+  const divApoio = criarElemento("div", ["apoio-card"]);
+  const divApoio2 = criarElemento("div", ["apoio-card"]);
+
+  const arroba = criarElemento(
+    "a",
+    ["font3-Bnm", "cor-6"],
+    "@Joaocube",
+    "https://twitter.com/joaocube"
+  );
+  const arroba2 = criarElemento(
+    "a",
+    ["font3-Bnm", "cor-6"],
+    "@Loudinhos",
+    "https://twitter.com/loudinhos"
+  );
+
+  const arrobaP = criarElemento(
+    "p",
+    ["cor-2", "font1-Pnm4"],
+    "Dev Junior - Frontend : ❝ O DreamTeam surgiu para a comunidade interagir mais durante o CBLOL ❞"
+  );
+  const arrobaP2 = criarElemento(
+    "p",
+    ["cor-2", "font1-Pnm4"],
+    "Fandom da Loud e principal apoiador do DreamTeam. Todas as artes foram feitas pelos seus designers."
+  );
+
+  const apoioConteudo = document.querySelector(".apoio-conteudo");
+
+  // Adição dos elementos à DOM
+  divApoio.appendChild(arroba);
+  divApoio2.appendChild(arroba2);
+  divApoio.appendChild(arrobaP);
+  divApoio2.appendChild(arrobaP2);
+  apoioConteudo.appendChild(divApoio);
+  apoioConteudo.appendChild(divApoio2);
+});
