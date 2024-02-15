@@ -35,13 +35,11 @@
 .info-card picture {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: bottom;
 }
 .info-card .info-text {
   width: auto;
