@@ -109,19 +109,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const arroba2 = criarElemento(
     "a",
     ["font3-Bnm", "cor-6"],
-    "@Loudinhos",
-    "https://twitter.com/loudinhos"
+    "@Apoiador",
+    "https://twitter.com/"
   );
 
   const arrobaP = criarElemento(
     "p",
     ["cor-2", "font1-Pnm4"],
-    "Dev Junior - Frontend : ❝ O DreamTeam surgiu para a comunidade interagir mais durante os splits do CBLOL ❞"
+    "Frontend Developer : Idealizei o projeto com intuito de estudar e de brinde participar da comunidade."
   );
   const arrobaP2 = criarElemento(
     "p",
     ["cor-2", "font1-Pnm4"],
-    "Fandom da Loud e principal apoiador do DreamTeam. Todas as artes foram feitas pelos seus designers"
+    "Fandom ____ e principal apoiador do DreamTeam. Todas as artes foram feitas pelos seus designers."
   );
 
   const apoioConteudo = document.querySelector(".apoio-conteudo");

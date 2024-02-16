@@ -135,27 +135,20 @@ section.game-bg {
   align-items: center;
   width: 160px;
   padding: 20px;
-  background-color: var(--cor-4);
+  background: linear-gradient(var(--cor-5), var(--cor-4));
   cursor: pointer;
 }
 .share button img {
   margin-left: 5px;
 }
 
-@media (min-width: 1200px) {
-  .menu ul {
-    display: flex;
-    justify-content: center;
-  }
-  .mob-icons {
-    display: none;
+@media (max-width: 1200px) {
+  .slider-container {
+    margin: 0 20px;
   }
 }
 
 @media (max-width: 800px) {
-  .slider-container {
-    margin: 0 20px;
-  }
   button.slider-button {
     background: var(--cor-5);
     border: 2px solid var(--cor-8);
@@ -167,20 +160,18 @@ section.game-bg {
 }
 
 @media (max-width: 600px) {
-  .game-bg {
+  section.game-bg {
     width: 100%;
     height: auto;
     padding: 50px 0;
-    background-color: var(--cor-2);
-    box-sizing: border-box;
   }
   .game-areatitle {
     text-align: left;
-    margin: 0 20px 60px 20px;
+    margin: 0 20px;
     flex-wrap: wrap;
   }
   .slider-areatitle h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .game-conteudo {
     display: grid;

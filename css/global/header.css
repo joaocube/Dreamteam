@@ -40,12 +40,14 @@
 .redes-sociais ul li img {
   filter: invert();
 }
+@media (max-width: 1200px) {
+  .header-conteudo {
+    margin: 10px 20px;
+  }
+}
 @media (max-width: 600px) {
   .header-bg {
     padding: 0;
-  }
-  .header-conteudo {
-    margin: 10px 20px;
   }
   .header-conteudo .logo {
     width: 36px;

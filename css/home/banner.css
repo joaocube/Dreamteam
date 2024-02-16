@@ -8,13 +8,13 @@
 .banner-bg::after {
   content: "";
   position: absolute;
-  background: linear-gradient(transparent 0%, rgb(3, 3, 3) 80%);
+  background: linear-gradient(transparent 0%, rgb(10, 10, 10) 90%);
   right: 0;
   bottom: 0;
   width: 100%;
   height: 30%;
 }
-/* IMG SITE OFICIAL */
+/* IMG LOL OFICIAL */
 .banner-container > img {
   position: absolute;
   top: 20%;
@@ -23,23 +23,27 @@
 .banner-conteudo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
+@media (max-width: 1200px) {
+  .banner-bg {
+    height: auto;
+  }
+  .banner-container > img {
+    position: absolute;
+    width: 240px;
+    top: 30%;
+    left: 5%;
+  }
+}
+
 @media (max-width: 600px) {
   .banner-bg {
     height: auto;
-    position: relative;
-  }
-  .banner-bg::after {
-    content: "";
-    position: absolute;
-    background: linear-gradient(transparent 0%, rgb(3, 3, 3) 90%);
-    height: 22%;
   }
   /* IMG SITE OFICIAL */
   .banner-container > img {
     width: 120px;
-    top: 60%;
+    top: 70%;
     left: 5%;
   }
 }

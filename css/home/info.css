@@ -46,23 +46,28 @@ picture img {
   padding: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .info-conteudo {
     margin: 0 20px;
   }
   .infos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
-  .info-card {
+  .info-card picture {
     width: 100%;
     height: auto;
   }
+}
+@media (max-width: 600px) {
+  .infos {
+    flex-wrap: wrap;
+  }
   .info-text h1 {
-    font: 600 1.2rem/1 "Neue Montreal-R", sans-serif;
+    font: 600 1.2rem/1 "Poppins", sans-serif;
   }
   .info-text p {
-    font: 400 1rem/1 "Neue Montreal-R", sans-serif;
+    font: 400 1rem/1 "Roboto", sans-serif;
   }
 }
