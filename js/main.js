@@ -67,7 +67,7 @@ if (track) {
 }
 
 // ADICIONANDO BACKGROUND NA SECTION GAME
-const imgGame = "/assets/img/game-main.png";
+const imgGame = "/assets/img/game-main.webp";
 const gamebg = document.querySelector(".game-bg");
 gamebg.style.backgroundImage = "url(" + imgGame + ")";
 
@@ -109,14 +109,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const arroba2 = criarElemento(
     "a",
     ["font3-Bnm", "cor-6"],
-    "@Apoiador",
+    "@Nickname",
     "https://twitter.com/"
   );
 
   const arrobaP = criarElemento(
     "p",
     ["cor-2", "font1-Pnm4"],
-    "Frontend Developer : Idealizei o projeto com intuito de estudar e de brinde participar da comunidade."
+    "Frontend Developer : Idealizei o projeto com intuito de estudar e de 'brinde' participar da comunidade."
   );
   const arrobaP2 = criarElemento(
     "p",

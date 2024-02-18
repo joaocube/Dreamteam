@@ -17,6 +17,7 @@
   max-width: 400px;
   height: auto;
   padding: 20px;
+  position: relative;
   overflow: hidden;
   background-color: var(--cor-1);
   clip-path: polygon(
@@ -30,21 +31,18 @@
     0 0
   );
 }
-.apoio-card a {
-  position: relative;
-}
-.apoio-card a::before {
+.apoio-card::before {
   content: "";
   position: absolute;
   background-color: var(--cor-4);
   width: 40px;
   height: 5px;
-  top: -10px;
-  left: -22px;
+  top: 10px;
+  left: 0;
   transition: 0.3s linear;
 }
-.apoio-card:hover ::before {
-  width: 120px;
+.apoio-card:hover::before {
+  width: 150px;
 }
 
 @media (max-width: 600px) {
