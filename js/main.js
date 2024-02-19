@@ -66,15 +66,10 @@ if (track) {
   });
 }
 
-// ADICIONANDO BACKGROUND NA SECTION GAME
-const imgGame = "/assets/img/game-main.webp";
-const gamebg = document.querySelector(".game-bg");
-gamebg.style.backgroundImage = "url(" + imgGame + ")";
-
 // CRIANDO FOOTER
 document.addEventListener("DOMContentLoaded", function () {
   let direitoAutoral = document.createElement("p");
-  direitoAutoral.classList.add("font1-Pnm2", "cor-2");
+  direitoAutoral.classList.add("font1-Pnm2", "col-2");
   direitoAutoral.textContent = "JoaoCube © Todos os direitos reservados";
   // SELECAO ONDE VAI SER ADICIONADO
   let footer = document.querySelector(".footer-conteudo");
@@ -102,25 +97,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const arroba = criarElemento(
     "a",
-    ["font3-Bnm", "cor-6"],
+    ["font3-Bnm", "col-6"],
     "@Joaocube",
     "https://twitter.com/joaocube"
   );
   const arroba2 = criarElemento(
     "a",
-    ["font3-Bnm", "cor-6"],
+    ["font3-Bnm", "col-6"],
     "@Nickname",
     "https://twitter.com/"
   );
 
   const arrobaP = criarElemento(
     "p",
-    ["cor-2", "font1-Pnm4"],
+    ["col-2", "font1-Pnm4"],
     "Frontend Developer : Idealizei o projeto com intuito de estudar e de 'brinde' participar da comunidade."
   );
   const arrobaP2 = criarElemento(
     "p",
-    ["cor-2", "font1-Pnm4"],
+    ["col-2", "font1-Pnm4"],
     "Fandom ____ e principal apoiador do DreamTeam. Todas as artes foram feitas pelos seus designers."
   );
 
