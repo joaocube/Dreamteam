@@ -66,8 +66,15 @@ if (track) {
   });
 }
 
-// CRIANDO FOOTER
+// CRIANDO BANNER E FOOTER
 document.addEventListener("DOMContentLoaded", function () {
+  let bannerMain = document.createElement("img");
+  bannerMain.src = "./assets/img/banner-main.webp";
+  bannerMain.alt = "imagem principal";
+  // LOCAL ONDE VAI SER ADICIONADO O ELEMENTO CRIADO
+  const contBanner = document.querySelector(".banner-conteudo");
+  contBanner.appendChild(bannerMain);
+
   let direitoAutoral = document.createElement("p");
   direitoAutoral.classList.add("font1-Pnm2", "col-2");
   direitoAutoral.textContent = "JoaoCube © Todos os direitos reservados";

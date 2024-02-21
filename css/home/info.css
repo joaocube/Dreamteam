@@ -3,7 +3,7 @@
   height: auto;
   box-sizing: border-box;
   background-color: var(--col-0);
-  padding: 80px 0;
+  padding: 60px 0;
 }
 /* CONT DOS CARDS INFO */
 .infos {
@@ -17,9 +17,7 @@
   grid-template-columns: 35% auto;
   width: 400px;
   height: auto;
-  border: 2px solid;
-  border-image: linear-gradient(90deg, var(--col-0), var(--col-6), var(--col-0))
-    1;
+  border: 2px solid var(--col-1);
   clip-path: polygon(
     30% 0%,
     94% 0,

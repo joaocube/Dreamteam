@@ -1,0 +1,10 @@
+/* GLOBAL STYLES */
+@import "./global/global.css";
+@import "./global/header.css";
+@import "./global/footer.css";
+@import "./home/banner.css";
+@import "./home/info.css";
+@import "./home/apoio.css";
+@import "./home/game.css";
+@import "./utilitarios/cores.css";
+@import "./utilitarios/tipografia.css";
