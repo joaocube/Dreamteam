@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Monte seu dreamteam do League of Legends Brasileiro!">
-  <link rel="preload" href="./css/style.min.css" as="style">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +32,7 @@
       <div class="header-conteudo">
         <div class="logo">
           <a href="index.html">
-            <img src="./assets/img/logo-main.webp" alt="imagem logo" width="46px" height="46px">
+            <img src="./assets/img/logo-main.webp" alt="imagem logo" width="46px" height="46px" id="logo">
           </a>
         </div>
         <div class="redes-sociais">
@@ -42,6 +41,9 @@
               <a href="https://github.com/JoaoCube" class="linkBlank">
                 <img src="./assets/img/icon/icon-github.svg" alt="imagem github" width="36px" height="24px">
               </a>
+            </li>
+            <li>
+              <img src="./assets/img/icon/icon-ajuste.svg" alt="imagem ajuste" width="24px" height="24px" onclick="mudar()" id="btn-ajuste">
             </li>
             <li>
               <img src="./assets/img/icon/icon-info.svg" alt="imagem informacoes" width="36px" height="24px" id="btnModal">
@@ -106,7 +108,7 @@
           <div class="slider-areatitle">
             <div>
               <h1 class="col-0 font3-Bnm2">Monte seu</h1>
-              <h2 class="col-6 font3-Bnm3i upc">DreamTeam</h2>
+              <h2 class="col-6 font3-Bnm3i upc" id="title">DreamTeam</h2>
             </div>
             <div class="slider-buttons">
               <button class="slider-button" data-slider-prev disabled>

@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let bannerMain = document.createElement("img");
   bannerMain.src = "./assets/img/banner-main.webp";
   bannerMain.alt = "imagem principal";
+  bannerMain.classList.add("main");
   // LOCAL ONDE VAI SER ADICIONADO O ELEMENTO CRIADO
   const contBanner = document.querySelector(".banner-conteudo");
   contBanner.appendChild(bannerMain);
@@ -104,13 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const arroba = criarElemento(
     "a",
-    ["font3-Bnm", "col-6"],
+    ["font3-Bnm", "col-3"],
     "@Joaocube",
     "https://twitter.com/joaocube"
   );
   const arroba2 = criarElemento(
     "a",
-    ["font3-Bnm", "col-6"],
+    ["font3-Bnm", "col-3"],
     "@Nickname",
     "https://twitter.com/"
   );
@@ -136,3 +137,24 @@ document.addEventListener("DOMContentLoaded", function () {
   apoioConteudo.appendChild(divApoio);
   apoioConteudo.appendChild(divApoio2);
 });
+
+// MUDA TUDO PRO BLUE SIDE
+let anguloRotacao = 0;
+function mudar() {
+  anguloRotacao = anguloRotacao === 0 ? 180 : 0;
+  const imgIcon = document.getElementById("btn-ajuste");
+  imgIcon.style.transform = `rotate(${anguloRotacao}deg)`;
+  let bannerMudar = document.querySelector(".main");
+  let logoMain = document.getElementById("logo");
+  let titleDream = document.getElementById("title");
+
+  if (anguloRotacao == 180) {
+    bannerMudar.src = "./assets/img/banner-main2.webp";
+    logoMain.src = "./assets/img/logo-main2.webp";
+    titleDream.style.color = "var(--col-8)";
+  } else {
+    bannerMudar.src = "./assets/img/banner-main.webp";
+    logoMain.src = "./assets/img/logo-main.webp";
+    titleDream.style.color = "var(--cor-6)";
+  }
+}

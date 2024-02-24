@@ -7,6 +7,7 @@
   --col-5: #d0a85c;
   --col-6: #ef2940;
   --col-7: #181818;
+  --col-8: #003eac;
 }
 
 .col-0 {
@@ -32,4 +33,7 @@
 }
 .col-7 {
   color: var(--col-7);
+}
+.col-8 {
+  color: var(--col-8);
 }

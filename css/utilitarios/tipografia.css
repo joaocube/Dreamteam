@@ -32,7 +32,7 @@
 
 /* TEXT DECORATION */
 .decoracao {
-  text-decoration: underline wavy var(--col-6);
+  text-decoration: underline wavy var(--col-3);
 }
 .upc {
   text-transform: uppercase;
