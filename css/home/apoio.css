@@ -15,12 +15,9 @@
   overflow: hidden;
 }
 .apoio-conteudo .apoio-card {
-  max-width: 400px;
   height: auto;
-  padding: 20px;
   position: relative;
   overflow: hidden;
-  background-color: var(--col-1);
   clip-path: polygon(
     30% 0%,
     94% 0,

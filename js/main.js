@@ -101,7 +101,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Criação dos elementos
   const divApoio = criarElemento("div", ["apoio-card"]);
+  divApoio.style.padding = "20px";
+  divApoio.style.width = "350px";
+  divApoio.style.background = "var(--col-1)";
   const divApoio2 = criarElemento("div", ["apoio-card"]);
+  divApoio2.style.padding = "20px";
+  divApoio2.style.width = "350px";
+  divApoio2.style.background = "var(--col-1)";
 
   const arroba = criarElemento(
     "a",
@@ -115,18 +121,16 @@ document.addEventListener("DOMContentLoaded", function () {
     "@Nickname",
     "https://twitter.com/"
   );
-
   const arrobaP = criarElemento(
     "p",
     ["col-2", "font1-Pnm4"],
-    "Frontend Developer : Idealizei o projeto com intuito de estudar e de 'brinde' participar da comunidade."
+    "Frontend Developer : Idealizei o projeto com intuito de estudar."
   );
   const arrobaP2 = criarElemento(
     "p",
     ["col-2", "font1-Pnm4"],
-    "Fandom ____ e principal apoiador do DreamTeam. Todas as artes foram feitas pelos seus designers."
+    "Principal apoiador, todas as artes foram feitas pela sua equipe."
   );
-
   const apoioConteudo = document.querySelector(".apoio-conteudo");
 
   // Adição dos elementos à DOM
@@ -144,17 +148,37 @@ function mudar() {
   anguloRotacao = anguloRotacao === 0 ? 180 : 0;
   const imgIcon = document.getElementById("btn-ajuste");
   imgIcon.style.transform = `rotate(${anguloRotacao}deg)`;
-  let bannerMudar = document.querySelector(".main");
-  let logoMain = document.getElementById("logo");
-  let titleDream = document.getElementById("title");
+  const bannerMudar = document.querySelector(".main");
+  const logoMain = document.getElementById("logo");
+  const titleDream = document.getElementById("title");
+  const red1 = document.getElementById("red1");
+  const red2 = document.getElementById("red2");
+  const red3 = document.getElementById("red3");
+  const imgAfter = document.getElementById("game-after");
+  const imgPath = anguloRotacao === 180 ? "2" : "";
 
-  if (anguloRotacao == 180) {
-    bannerMudar.src = "./assets/img/banner-main2.webp";
-    logoMain.src = "./assets/img/logo-main2.webp";
-    titleDream.style.color = "var(--col-8)";
-  } else {
-    bannerMudar.src = "./assets/img/banner-main.webp";
-    logoMain.src = "./assets/img/logo-main.webp";
-    titleDream.style.color = "var(--cor-6)";
-  }
+  atualizarImagem(bannerMudar, `./assets/img/banner-main${imgPath}.webp`);
+  atualizarImagem(logoMain, `./assets/img/logo-main${imgPath}.webp`);
+  atualizarCorTexto(
+    titleDream,
+    anguloRotacao === 180 ? "var(--col-8)" : "var(--col-6)"
+  );
+  atualizarImagem(
+    red1,
+    `./assets/img/info1-${anguloRotacao === 180 ? "blue" : "red"}.webp`
+  );
+  atualizarImagem(
+    red2,
+    `./assets/img/info2-${anguloRotacao === 180 ? "blue" : "red"}.webp`
+  );
+  atualizarImagem(
+    red3,
+    `./assets/img/info3-${anguloRotacao === 180 ? "blue" : "red"}.webp`
+  );
+}
+function atualizarImagem(elemento, caminho) {
+  elemento.src = caminho;
+}
+function atualizarCorTexto(elemento, cor) {
+  elemento.style.color = cor;
 }
