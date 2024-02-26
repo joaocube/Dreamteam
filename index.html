@@ -27,32 +27,7 @@
     </div>
   </div>
 
-  <header class="header-bg">
-    <article class="header-container all-container">
-      <div class="header-conteudo">
-        <div class="logo">
-          <a href="index.html">
-            <img src="./assets/img/logo-main.webp" alt="imagem logo" width="46px" height="46px" id="logo">
-          </a>
-        </div>
-        <div class="redes-sociais">
-          <ul>
-            <!-- <li>
-              <a href="https://github.com/JoaoCube" class="linkBlank">
-                <img src="./assets/img/icon/icon-github.svg" alt="imagem github" width="36px" height="24px">
-              </a>
-            </li> -->
-            <li>
-              <img src="./assets/img/icon/icon-ajuste.svg" alt="imagem ajuste" width="24px" height="24px" onclick="mudar()" id="btn-ajuste">
-            </li>
-            <li>
-              <img src="./assets/img/icon/icon-info.svg" alt="imagem informacoes" width="36px" height="24px" id="btnModal">
-            </li>
-          </ul>
-        </div>
-      </div>
-    </article>
-  </header>
+  <header class="header-bg" id="header-bg"></header>
 
   <main>
     <section class="banner-bg">
@@ -63,141 +38,40 @@
       </article>
     </section>
 
-    <section class="info-bg">
-      <article class="info-container all-container">
-        <div class="info-conteudo">
-          <div class="infos">
-            <div class="info-card ">
-              <picture>
-                <img src="./assets/img/info1-red.webp" alt="imagem" id="red1">
-              </picture>
-              <div class="info-text">
-                <h1 class="col-5 font2-Mnm upc decoracao">THE TEAM</h1>
-                <br>
-                <p class="col-2 font1-Pnm4">Escolha 5 jogadores, se quiser mudar um jogador basta excluir (-) e adicionar outro (+).</p>
-              </div>
-            </div>
-            <div class="info-card ">
-              <picture>
-                <img src="./assets/img/info2-red.webp" alt="imagem" id="red2">
-              </picture>
-              <div class="info-text">
-                <h1 class="col-5 font2-Mnm upc decoracao">THE DREAM</h1>
-                <br>
-                <p class="col-2 font1-Pnm4"> Não existe quantidade de 'créditos' para montar seu dreamteam, não limitaremos você.</p>
-              </div>
-            </div>
-            <div class="info-card ">
-              <picture>
-                <img src="./assets/img/info3-red.webp" alt="imagem" id="red3">
-              </picture>
-              <div class="info-text">
-                <h1 class="col-5 font2-Mnm upc decoracao">THE LEGENDS</h1>
-                <br>
-                <p class="col-2 font1-Pnm4">Compartilhe e marque a @______ no twitter/x e faça parte da nossa comunidade.</p>
-              </div>
-            </div>
+    <section class="info-bg" id="info-bg"></section>
+
+    <section class="game-bg">
+      <article class="game-container all-container">
+        <div class="game-area">
+          <div class="game-title">
+            <h1 class="col-0 font3-Bnm2">Monte seu</h1>
+            <h2 class="col-6 font3-Bnm3i upc" id="title">DreamTeam</h2>
+          </div>
+
+          <div class="roles">
+            <button>
+              <img src="./assets/img/icon/top-icon.svg" alt="imagem top laner" width="36px" height="36px">
+            </button>
+            <!-- TOP -->
+            <button>
+              <img src="./assets/img/icon/jungle-icon.svg" alt="imagem jungler" width="36px" height="36px">
+            </button>
+            <!-- JUNGLER -->
+            <button>
+              <img src="./assets/img/icon/mid-icon.svg" alt="imagem mid laner" width="36px" height="36px">
+            </button>
+            <!-- MID -->
+            <button>
+              <img src="./assets/img/icon/adc-icon.svg" alt="imagem adc" width="36px" height="36px">
+            </button>
+            <!-- ADC -->
+            <button>
+              <img src="./assets/img/icon/support-icon.svg" alt="imagem support" width="36px" height="36px">
+            </button>
+            <!-- SUPPORT -->
           </div>
         </div>
-      </article>
-    </section>
-
-    <section class="game-bg" id="game-after">
-      <article class="slider-container all-container">
-        <div class="slider-conteudo" data-slider>
-          <div class="slider-areatitle">
-            <div>
-              <h1 class="col-0 font3-Bnm2">Monte seu</h1>
-              <h2 class="col-6 font3-Bnm3i upc" id="title">DreamTeam</h2>
-            </div>
-            <div class="slider-buttons">
-              <button class="slider-button" data-slider-prev disabled>
-                <img src="./assets/img/icon/icon-prev.svg" alt="imagem seta" width="24px" height="24px">
-              </button>
-              <button class="slider-button" data-slider-next>
-                <img src="./assets/img/icon/icon-next.svg" alt="imagem seta" width="24px" height="24px">
-              </button>
-            </div>
-          </div> <!-- FIM AREA TITLE E BUTTON -->
-          <ul class="slider__track" data-slider-track>
-            <li>
-              <img src="./assets/img/icon/top-icon.svg" alt="imagem top laner" width="36px" height="36px">
-              <div class="slide">
-                <button class="primaria">
-                  <img src="./assets/img/icon/icon-menos.svg" alt="imagem adicionar" width="46px" height="46px">
-                </button>
-                <img src="./assets/img/players/top-supercleber.webp" alt="supercleber" class="slideimg" />
-                <div class="slide-name">
-                  <p class="col-2 font1-Pnm4">Top</p>
-                </div>
-              </div>
-            </li>
-            <!-- ITEM 1 -->
-            <li>
-              <img src="./assets/img/icon/jungle-icon.svg" alt="imagem top laner" width="36px" height="36px">
-              <div class="slide">
-                <button class="primaria">
-                  <img src="./assets/img/icon/icon-menos.svg" alt="imagem adicionar" width="46px" height="46px">
-                </button>
-                <img src="./assets/img/players/jungle-mir.webp" alt="mir" class="slideimg" />
-                <div class="slide-name">
-                  <p class="col-2 font1-Pnm4">Jungler</p>
-                </div>
-              </div>
-            </li>
-            <!-- ITEM 2 -->
-            <li>
-              <img src="./assets/img/icon/mid-icon.svg" alt="imagem top laner" width="36px" height="36px">
-              <div class="slide">
-                <button class="primaria">
-                  <img src="./assets/img/icon/icon-menos.svg" alt="imagem adicionar" width="46px" height="46px">
-                </button>
-                <img src="./assets/img/players/mid-tinowns.webp" alt="tinowns" class="slideimg" />
-                <div class="slide-name">
-                  <p class="col-2 font1-Pnm4">Mid</p>
-                </div>
-            </li>
-            <!-- ITEM 3 -->
-            <li>
-              <img src="./assets/img/icon/adc-icon.svg" alt="imagem top laner" width="36px" height="36px">
-              <div class="slide">
-                <button class="primaria">
-                  <img src="./assets/img/icon/icon-menos.svg" alt="imagem adicionar" width="46px" height="46px">
-                </button>
-                <img src="./assets/img/players/adc-brance.webp" alt="brance" class="slideimg" />
-                <div class="slide-name">
-                  <p class="col-2 font1-Pnm4">Adc</p>
-                </div>
-              </div>
-            </li>
-            <!-- ITEM 4 -->
-            <li>
-              <img src="./assets/img/icon/support-icon.svg" alt="imagem top laner" width="36px" height="36px">
-              <div class="slide">
-                <button class="primaria">
-                  <img src="./assets/img/icon/icon-menos.svg" alt="imagem adicionar" width="46px" height="46px">
-                </button>
-                <img src="./assets/img/players/sup-ceos.webp" alt="ceos" class="slideimg" />
-                <div class="slide-name">
-                  <p class="col-2 font1-Pnm4">Support</p>
-                </div>
-              </div>
-            </li>
-            <!-- ITEM 5 -->
-            <li>
-              <img src="./assets/img/icon/mid-icon.svg" alt="imagem top laner" width="36px" height="36px">
-              <div class="slide">
-                <button class="primaria">
-                  <img src="./assets/img/icon/icon-menos.svg" alt="imagem adicionar" width="46px" height="46px">
-                </button>
-                <img src="./assets/img/players/coach-dionrray.webp" alt="dionrray" class="slideimg" />
-                <div class="slide-name">
-                  <p class="col-2 font1-Pnm4">Coach</p>
-                </div>
-              </div>
-            </li>
-            <!-- COACH -->
-          </ul>
+        <div class="game-conteudo">
         </div>
         <div class="share">
           <button class="col-2 font1-Pnm2-2 upc" onclick="share('@loudinhos')">COMPARTILHAR<img src="./assets/img/icon/icon-share.svg" style="filter: invert();" alt="imagem compartilhar" width="24px" height="24px"></button>

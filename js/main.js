@@ -4,6 +4,70 @@ linksBlank.forEach(function (linkBlank) {
   linkBlank.setAttribute("target", "_blank");
 });
 
+// Criação do artigo
+var article = document.createElement("article");
+article.className = "header-container all-container";
+
+// Criação do conteúdo do cabeçalho
+var headerContent = document.createElement("div");
+headerContent.className = "header-conteudo";
+
+// Criação do logo
+var logo = document.createElement("div");
+logo.className = "logo";
+var logoLink = document.createElement("a");
+logoLink.href = "index.html";
+var logoImg = document.createElement("img");
+logoImg.src = "./assets/img/logo-main.webp";
+logoImg.alt = "imagem logo";
+logoImg.width = "46";
+logoImg.height = "46";
+logoImg.id = "logo";
+logoLink.appendChild(logoImg);
+logo.appendChild(logoLink);
+
+// Criação das redes sociais
+var redesSociais = document.createElement("div");
+redesSociais.className = "redes-sociais";
+var ul = document.createElement("ul");
+
+// Criação do botão de ajuste
+var liAjuste = document.createElement("li");
+var imgAjuste = document.createElement("img");
+imgAjuste.src = "./assets/img/icon/icon-ajuste.svg";
+imgAjuste.alt = "imagem ajuste";
+imgAjuste.width = "24";
+imgAjuste.height = "24";
+imgAjuste.id = "btn-ajuste";
+imgAjuste.addEventListener("click", mudar); // Adicionando o evento de clique
+liAjuste.appendChild(imgAjuste);
+
+var header = document.getElementById("header-bg");
+
+// Criação do botão de informações
+var liInfo = document.createElement("li");
+var imgInfo = document.createElement("img");
+imgInfo.src = "./assets/img/icon/icon-info.svg";
+imgInfo.alt = "imagem informacoes";
+imgInfo.width = "36";
+imgInfo.height = "24";
+imgInfo.id = "btnModal";
+liInfo.appendChild(imgInfo);
+
+ul.appendChild(liAjuste);
+ul.appendChild(liInfo);
+redesSociais.appendChild(ul);
+
+// Adicionando elementos ao conteúdo do cabeçalho
+headerContent.appendChild(logo);
+headerContent.appendChild(redesSociais);
+
+// Adicionando conteúdo do cabeçalho ao artigo
+article.appendChild(headerContent);
+
+// Adicionando artigo ao cabeçalho
+header.appendChild(article);
+
 // MODAL INFO
 let modal = document.getElementById("Modal");
 let btnModal = document.getElementById("btnModal");
@@ -15,7 +79,6 @@ btnModal.onclick = function () {
 function fecharModal() {
   modal.style.display = "none";
 }
-
 // COMPARTILHAR NO X
 function share(usuario) {
   var nomeUsuario = encodeURIComponent(usuario);
@@ -26,47 +89,7 @@ function share(usuario) {
   window.open(urlTwitter, "_blank");
 }
 
-// SLIDER
-const slider = document.querySelector("[data-slider]");
-const track = slider.querySelector("[data-slider-track]");
-const prev = slider.querySelector("[data-slider-prev]");
-const next = slider.querySelector("[data-slider-next]");
-
-if (track) {
-  prev.addEventListener("click", () => {
-    next.removeAttribute("disabled");
-    track.scrollTo({
-      left: track.scrollLeft - track.firstElementChild.offsetWidth,
-      behavior: "smooth",
-    });
-  });
-
-  next.addEventListener("click", () => {
-    prev.removeAttribute("disabled");
-    track.scrollTo({
-      left: track.scrollLeft + track.firstElementChild.offsetWidth,
-      behavior: "smooth",
-    });
-  });
-
-  track.addEventListener("scroll", () => {
-    const trackScrollWidth = track.scrollWidth;
-    const trackOuterWidth = track.clientWidth;
-
-    prev.removeAttribute("disabled");
-    next.removeAttribute("disabled");
-
-    if (track.scrollLeft <= 0) {
-      prev.setAttribute("disabled", "");
-    }
-
-    if (track.scrollLeft === trackScrollWidth - trackOuterWidth) {
-      next.setAttribute("disabled", "");
-    }
-  });
-}
-
-// CRIANDO BANNER E FOOTER
+// CRIANDO BANNER
 document.addEventListener("DOMContentLoaded", function () {
   let bannerMain = document.createElement("img");
   bannerMain.src = "./assets/img/banner-main.webp";
@@ -75,15 +98,81 @@ document.addEventListener("DOMContentLoaded", function () {
   // LOCAL ONDE VAI SER ADICIONADO O ELEMENTO CRIADO
   const contBanner = document.querySelector(".banner-conteudo");
   contBanner.appendChild(bannerMain);
-
-  let direitoAutoral = document.createElement("p");
-  direitoAutoral.classList.add("font1-Pnm2", "col-2");
-  direitoAutoral.textContent = "JoaoCube © Todos os direitos reservados";
-  // SELECAO ONDE VAI SER ADICIONADO
-  let footer = document.querySelector(".footer-conteudo");
-  // ADICIONANDO ATRIBUTO AO FOOTER
-  footer.appendChild(direitoAutoral);
 });
+
+// CRIANDO TODO A PARTE DE INFO DO GAME
+var article = document.createElement("article");
+article.className = "info-container all-container";
+// Criação do conteúdo
+var content = document.createElement("div");
+content.className = "info-conteudo";
+// Criação da lista de informações
+var infoList = document.createElement("div");
+infoList.className = "infos";
+
+// Função para criar um card de informação
+function createInfoCard(imgSrc, altText, title, description, imgId) {
+  var infoCard = document.createElement("div");
+  infoCard.className = "info-card";
+  var picture = document.createElement("picture");
+  var img = document.createElement("img");
+  img.src = imgSrc;
+  img.alt = altText;
+  img.id = imgId;
+  picture.appendChild(img);
+  infoCard.appendChild(picture);
+
+  var infoText = document.createElement("div");
+  infoText.className = "info-text";
+
+  var heading = document.createElement("h1");
+  heading.className = "col-5 font2-Mnm upc decoracao";
+  heading.textContent = title;
+
+  var br = document.createElement("br");
+  var paragraph = document.createElement("p");
+  paragraph.className = "col-2 font1-Pnm4";
+  paragraph.textContent = description;
+  infoText.appendChild(heading);
+  infoText.appendChild(br);
+  infoText.appendChild(paragraph);
+  infoCard.appendChild(infoText);
+
+  return infoCard;
+}
+// Criando os três cards de informação
+var card1 = createInfoCard(
+  "./assets/img/info1-red.webp",
+  "imagem",
+  "THE TEAM",
+  "Escolha 5 jogadores, se quiser mudar um jogador basta excluir (-) e adicionar outro (+).",
+  "red1"
+);
+var card2 = createInfoCard(
+  "./assets/img/info2-red.webp",
+  "imagem",
+  "THE DREAM",
+  "Não existe quantidade de 'créditos' para montar seu dreamteam, não limitaremos você.",
+  "red2"
+);
+var card3 = createInfoCard(
+  "./assets/img/info3-red.webp",
+  "imagem",
+  "THE LEGENDS",
+  "Compartilhe e marque a @______ no twitter/x e faça parte da nossa comunidade.",
+  "red3"
+);
+const section = document.getElementById("info-bg");
+// Adicionando os cards à lista de informações
+infoList.appendChild(card1);
+infoList.appendChild(card2);
+infoList.appendChild(card3);
+// Adicionando a lista de informações ao conteúdo
+content.appendChild(infoList);
+// Adicionando o conteúdo ao artigo
+article.appendChild(content);
+// Adicionando o artigo à seção
+section.appendChild(article);
 
 // CRIANDO CARDS DO ARROBA
 document.addEventListener("DOMContentLoaded", function () {
@@ -182,3 +271,15 @@ function atualizarImagem(elemento, caminho) {
 function atualizarCorTexto(elemento, cor) {
   elemento.style.color = cor;
 }
+
+// ADD FOOTER E ATUALIZANDO O ANO AUTOMATICAMENTE
+document.addEventListener("DOMContentLoaded", function () {
+  let direitoAutoral = document.createElement("p");
+  const agora = new Date();
+  const inicio = 2023;
+  const ano = agora.getFullYear();
+  direitoAutoral.classList.add("font1-Pnm2", "col-2");
+  direitoAutoral.textContent = `Joaocube © ${inicio} - ${ano}`;
+  let footer = document.querySelector(".footer-conteudo");
+  footer.appendChild(direitoAutoral);
+});
